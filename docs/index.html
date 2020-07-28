@@ -1,0 +1,37 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Wikidata Top Card Game</title>
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+        <script src="cardgame.js"></script>
+    </head>
+    <body>
+		<a href="./" style="color: black"><h1>Wikidata Top Card Game</h1></a><br>
+		<p id="status"></p>
+        <div id="cards">
+        </div>
+        <p>Gameplay:<br>Click a property on the card. Compare with the computer's card that appears. If you guessed correctly, you win!</p>
+        <p>To win you should correctly guess whether the property you selected will have a higher or lower value than the same property on the computer's card. Click on an existing card again to get the next card.</p>
+        <p>Select a topic:</p>
+		<form onsubmit="return submitQuery(event)">
+            <input id="topic" type="text" name="topic" placeholder="topic QID">
+            <select id="lang" name="lang"></select>
+            <input type="submit" value="Generate">
+        </form>
+        <p>Examples:
+			<a href="?Q11344">chemical element</a>,
+            <a href="?Q5503">metro system</a>,
+            <a href="?Q23442">island</a>,
+            <a href="?Q1032372">hackerspace</a>,
+            <a href="?Q55990535">computer model</a>,
+            <a href="?Q35273">telescope</a>,
+            <a href="?Q142714">card game</a>.
+        </p>
+		<p>This an online version of the <a href="https://www.wikidata.org/wiki/Q750790" target="blank">Top Trumps</a> game using auto-generated cards from Wikidata. Adapted from the <a href="https://cardgame.morr.cc/">Wikidata Card Game Generator</a>.</p>
+    </body>
+</html>
