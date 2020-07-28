@@ -1,1 +1,1 @@
-# wikidata-top-card-game
+# top-card
